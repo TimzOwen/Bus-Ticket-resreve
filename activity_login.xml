@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpActivity">
+
+    <TextView
+        android:text="User Login"
+        android:layout_above="@id/linear_login"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textSize="32sp"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:textStyle="bold"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/linear_login"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:layout_margin="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:hint="Enter your Email"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_marginTop="10dp"
+            android:hint="Enter your Email"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_marginTop="10dp"
+            android:text="Login "
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tvAlready_registered"
+            android:layout_width="match_parent"
+            android:text=" Not Registered?    Create Account"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</RelativeLayout>
