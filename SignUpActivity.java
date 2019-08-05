@@ -41,12 +41,12 @@ public class SignUpActivity extends AppCompatActivity  implements View.OnClickLi
 
          firebaseAuth = FirebaseAuth.getInstance();
 
-//        if (firebaseAuth.getCurrentUser()!=null)
-//        {
-//            //user profile here
-//            Intent intent = new Intent(SignUpActivity.this, FindTripActivity.class);
-//            startActivity(intent);
-//        }
+       if (firebaseAuth.getCurrentUser()!=null)
+       {
+           //user profile here
+           Intent intent = new Intent(SignUpActivity.this, FindTripActivity.class);
+           startActivity(intent);
+       }
 
         collectUserIds();
 
@@ -88,6 +88,8 @@ public class SignUpActivity extends AppCompatActivity  implements View.OnClickLi
     {
         String email = etUemail.getText().toString().trim();
         String password = etUpassword.getText().toString().trim();
+        
+        email.focuc();
 
         if (!TextUtils.isEmpty(email))
         {
@@ -114,8 +116,8 @@ public class SignUpActivity extends AppCompatActivity  implements View.OnClickLi
                             progressDialog.dismiss();
 
                                 //user profile here
-                                Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
-                                startActivity(intent);
+                                  startActivity( new Intent(SignUpActivity.this, LoginActivity.class));
+                               
                         }
                         else
                         {
@@ -131,7 +133,6 @@ public class SignUpActivity extends AppCompatActivity  implements View.OnClickLi
     public void loginUser()
     {
         //login user
-        Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
-        startActivity(intent);
+        startActivity(new Intent(SignUpActivity.this, LoginActivity.class));
     }
 }
