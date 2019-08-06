@@ -43,16 +43,20 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
 //            startActivity(intent);
 //        }
 
-        etEmail = (EditText) findViewById(R.id.etEmail);
-        etPass = (EditText) findViewById(R.id.etPassword);
-        tvAlreadyRegistered = (TextView) findViewById(R.id.tvAlready_registered);
-        btnLogin = (Button) findViewById(R.id.btnLogin);
-
         pProgressDialog = new ProgressDialog(this);
 
         btnLogin.setOnClickListener(this);
         tvAlreadyRegistered.setOnClickListener(this);
 
+    }
+    
+    //function that finds the relevant ids of the views
+    public void findIds()
+    {
+         etEmail = (EditText) findViewById(R.id.etEmail);
+        etPass = (EditText) findViewById(R.id.etPassword);
+        tvAlreadyRegistered = (TextView) findViewById(R.id.tvAlready_registered);
+        btnLogin = (Button) findViewById(R.id.btnLogin);
     }
 
     @Override
